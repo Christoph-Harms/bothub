@@ -51,8 +51,7 @@ class Bot
      */
     protected function fetchToken()
     {
-        $className = (new \ReflectionClass($this))->getShortName();
-        return env('BOT_TOKEN_' . strtoupper($className), null);
+        return env('BOT_TOKEN_' . strtoupper($this->getName()), null);
     }
 
     /**
@@ -71,6 +70,18 @@ class Bot
     public function handle($webhook = true)
     {
         return $this->api->commandsHandler($webhook);
+    }
+
+    public function setWebhook()
+    {
+        $this->api->setWebhook([
+                'url' => url($this->token),
+            ]);
+    }
+
+    protected function getName()
+    {
+        return (new \ReflectionClass($this))->getShortName();
     }
 
     /**
