@@ -84,6 +84,11 @@ class Bot
             ]);
     }
 
+    public function deleteWebhook()
+    {
+        $this->api->removeWebhook();
+    }
+
     protected function getName()
     {
         return (new \ReflectionClass($this))->getShortName();

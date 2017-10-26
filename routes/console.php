@@ -17,6 +17,10 @@ Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->describe('Display an inspiring quote');
 
-Artisan::command('bots:register_webhooks', function () {
+Artisan::command('bots:webhooks:register', function () {
     (new \BotHub\Bots\Alfred())->setWebhook();
+});
+
+Artisan::command('bots:webhooks:delete', function () {
+    (new \BotHub\Bots\Alfred())->deleteWebhook();
 });
