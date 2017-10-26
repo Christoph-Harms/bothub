@@ -17,6 +17,6 @@ Route::get('/', function () {
 
 $alfred = new \BotHub\Bots\Alfred();
 
-Route::post($alfred->getToken(), function() use ($alfred) {
+Route::post($alfred->getPath(), function() use ($alfred) {
     $alfred->handle();
 });

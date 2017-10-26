@@ -62,6 +62,11 @@ class Bot
         return $this->token;
     }
 
+    public function getPath()
+    {
+        return urlencode($this->token);
+    }
+
     public function addCommand($command)
     {
         $this->api->addCommand($command);
@@ -75,7 +80,7 @@ class Bot
     public function setWebhook()
     {
         $this->api->setWebhook([
-                'url' => url($this->token),
+                'url' => url($this->getPath()),
             ]);
     }
 
