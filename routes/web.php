@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+$alfred = new \BotHub\Bots\Alfred();
+
+Route::post($alfred->getToken(), function() use ($alfred) {
+    $alfred->handle();
+});
