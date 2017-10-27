@@ -31,11 +31,12 @@ class Bot
     /**
      * Bot constructor.
      * @param string $token
+     * @param Api|null $api
      */
-    public function __construct(string $token = null)
+    public function __construct(string $token = null, Api $api = null)
     {
         $this->token = $token ?? $this->fetchToken() ?? $this->panic('Unable to fetch token.');
-        $this->api = new Api($this->token);
+        $this->api = $api ?? new Api($this->token);
     }
 
     /**
@@ -87,6 +88,16 @@ class Bot
     public function deleteWebhook()
     {
         $this->api->removeWebhook();
+    }
+
+    public function sendMessage($chatId, $message)
+    {
+        return $this->api->sendMessage(
+            [
+                'chat_id' => $chatId,
+                'text' => $message,
+            ]
+        );
     }
 
 
