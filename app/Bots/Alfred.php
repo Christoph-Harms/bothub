@@ -10,6 +10,7 @@ namespace BotHub\Bots;
 
 
 use BotHub\Bot;
+use BotHub\Bots\Alfred\Commands\QuoteCommand;
 use BotHub\Bots\Alfred\Commands\StartCommand;
 
 class Alfred extends Bot
@@ -22,5 +23,6 @@ class Alfred extends Bot
     {
         parent::__construct();
         $this->addCommand(StartCommand::class);
+        $this->addCommand(QuoteCommand::class);
     }
 }
