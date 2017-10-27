@@ -30,7 +30,8 @@ class QuoteCommand extends Command
      */
     public function handle($arguments)
     {
-        \Log::debug("Recieved quote request");
+        $update = $this->getUpdate();
+        \Log::debug("Recieved quote request: " . $update->toJson());
         $this->replyWithChatAction(['action' => Actions::TYPING]);
         $quote = Inspiring::quote();
         $this->replyWithMessage(['text' => $quote]);
