@@ -64,7 +64,7 @@ class Bot
 
     public function getPath()
     {
-        return urlencode($this->token);
+        return urlencode($this->getName() . '/webhook');
     }
 
     public function addCommand($command)
@@ -88,6 +88,7 @@ class Bot
     {
         $this->api->removeWebhook();
     }
+
 
     protected function getName()
     {

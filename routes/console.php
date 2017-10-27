@@ -24,3 +24,7 @@ Artisan::command('bots:webhooks:register', function () {
 Artisan::command('bots:webhooks:delete', function () {
     (new \BotHub\Bots\Alfred())->deleteWebhook();
 });
+
+Artisan::command('bots:webhooks:info', function () {
+    $info (new \BotHub\Bots\Alfred())->deleteWebhook();
+});
