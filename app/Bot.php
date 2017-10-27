@@ -64,7 +64,7 @@ class Bot
 
     public function getPath()
     {
-        return strtolower($this->getName() . '/webhook');
+        return base64_encode($this->getToken());
     }
 
     public function addCommand($command)
