@@ -30,23 +30,29 @@ class AddReminderCommand extends Command
      */
     public function handle($arguments)
     {
-        $chatId = $this->getUpdate()['message']['chat']['id'];
+        try {
+            $chatId = $this->getUpdate()['message']['chat']['id'];
 
-        $alfred = new Alfred;
+            $alfred = new Alfred;
 
-        if (empty($chatId)) {
+            if (empty($chatId)) {
+                $this->replyWithMessage([
+                    'text' => "Sorry, I encountered an error when trying to add the reminder. This is sad. :("
+                ]);
+            }
+
+            $datetime = Carbon::parse($arguments[0]);
+            $text = $arguments[1];
+
             $this->replyWithMessage([
-                'text' => "Sorry, I encountered an error when trying to add the reminder. This is sad. :("
+                'text' => 'Ok, I will remind you to "' . $text . '" at ' . $datetime->toDateTimeString(),
+            ]);
+
+            $alfred->addReminder($chatId, $datetime, $text);
+        } catch (\Throwable $throwable) {
+            $this->replyWithMessage([
+                'text' => "An error occured: '" . $throwable->getMessage() . "'\n\nin file " . $throwable->getFile() . ' on line ' . $throwable->getLine()
             ]);
         }
-
-        $datetime = Carbon::parse($arguments[0]);
-        $text = $arguments[1];
-
-        $this->replyWithMessage([
-            'text' => 'Ok, I will remind you to "' . $text . '" at ' . $datetime->toDateTimeString(),
-        ]);
-
-        $alfred->addReminder($chatId, $datetime, $text);
     }
 }
