@@ -50,12 +50,16 @@ class AddReminderCommand extends Command
 
             $alfred->addReminder($chatId, $datetime, $text);
         } catch (\Throwable $throwable) {
+            $message = "An error occured: '" .
+                $throwable->getMessage() .
+                "'\n\nin file " . $throwable->getFile() .
+                ' on line ' . $throwable->getLine() .
+                '\n\n' . $throwable->getTraceAsString();
+
+            $message = str_limit($message, 4000);
+
             $this->replyWithMessage([
-                'text' => "An error occured: '" .
-                    $throwable->getMessage() .
-                    "'\n\nin file " . $throwable->getFile() .
-                    ' on line ' . $throwable->getLine() .
-                    '\n\n' . $throwable->getTraceAsString()
+                'text' => $message,
             ]);
         }
     }
