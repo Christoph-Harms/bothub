@@ -35,6 +35,8 @@ class AddReminderCommand extends Command
 
             $alfred = new Alfred;
 
+            $argument = explode(" ", $arguments);
+
             $this->replyWithMessage([
                 'text' => "This is what I got: \n\n" . json_encode($arguments, JSON_PRETTY_PRINT),
             ]);
