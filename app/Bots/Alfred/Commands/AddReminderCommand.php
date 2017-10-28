@@ -35,6 +35,10 @@ class AddReminderCommand extends Command
 
             $alfred = new Alfred;
 
+            $this->replyWithMessage([
+                'text' => "This is what I got: \n\n" . json_encode($arguments, JSON_PRETTY_PRINT),
+            ]);
+
             if (empty($chatId)) {
                 $this->replyWithMessage([
                     'text' => "Sorry, I encountered an error when trying to add the reminder. This is sad. :("
