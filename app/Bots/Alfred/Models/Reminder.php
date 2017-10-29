@@ -5,7 +5,7 @@ namespace BotHub\Bots\Alfred\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * @property mixed chatId
+ * @property mixed chat_id
  * @property mixed message
  */
 class Reminder extends Model

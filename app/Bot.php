@@ -11,7 +11,6 @@ namespace BotHub;
 
 use BotHub\Exceptions\BotHubException;
 use Telegram\Bot\Api;
-use Telegram\Bot\Laravel\Facades\Telegram;
 
 /**
  * Class Bot
@@ -36,7 +35,8 @@ class Bot
     public function __construct(string $token = null, Api $api = null)
     {
         $this->token = $token ?? $this->fetchToken() ?? $this->panic('Unable to fetch token.');
-        $this->api = $api ?? new Api($this->token);
+        $this->api = $api ?? app('telegram');
+        $this->api->setAccessToken($this->token);
     }
 
     /**

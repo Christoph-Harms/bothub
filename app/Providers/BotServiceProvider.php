@@ -10,11 +10,12 @@ namespace BotHub\Providers;
 
 
 use Illuminate\Support\ServiceProvider;
+use Telegram\Bot\Api;
 
 class BotServiceProvider extends ServiceProvider
 {
     public function register()
     {
-
+       //
     }
 }
