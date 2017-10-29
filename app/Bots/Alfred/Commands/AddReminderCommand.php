@@ -9,7 +9,9 @@
 namespace BotHub\Bots\Alfred\Commands;
 
 
-use BotHub\Bots\Alfred;
+use/** @noinspection PhpUndefinedClassInspection */
+    /** @noinspection PhpUndefinedNamespaceInspection */
+    Facades\BotHub\Bots\Alfred;
 use Carbon\Carbon;
 use Telegram\Bot\Commands\Command;
 
@@ -33,8 +35,6 @@ class AddReminderCommand extends Command
         try {
             $chatId = $this->getUpdate()['message']['chat']['id'];
 
-            $alfred = new Alfred;
-
             $arguments = explode(" ", $arguments);
 
             $this->replyWithMessage([
@@ -54,7 +54,8 @@ class AddReminderCommand extends Command
                 'text' => 'Ok, I will remind you to "' . $text . '" at ' . $datetime->toDateTimeString(),
             ]);
 
-            $alfred->addReminder($chatId, $datetime, $text);
+            /** @noinspection PhpUndefinedClassInspection */
+            Alfred::addReminder($chatId, $datetime, $text);
         } catch (\Throwable $throwable) {
             $message = "An error occured: '" .
                 $throwable->getMessage() .

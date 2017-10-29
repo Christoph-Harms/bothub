@@ -46,8 +46,10 @@ class Alfred extends Bot
 
 
         $dueReminders->each(function ($reminder) {
+
+            $text = "You wanted to be reminded, so here is your reminder:\n\n" . $reminder->message;
             /** @var Reminder $reminder */
-            $this->sendMessage($reminder->chatId, $reminder->message);
+            $this->sendMessage($reminder->chatId, $text);
         });
     }
 }
