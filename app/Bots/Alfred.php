@@ -50,6 +50,7 @@ class Alfred extends Bot
             $text = "You wanted to be reminded, so here is your reminder:\n\n" . $reminder->message;
             /** @var Reminder $reminder */
             $this->sendMessage($reminder->chat_id, $text);
+            $reminder->delete();
         });
     }
 }

@@ -9,6 +9,7 @@
 namespace BotHub\Providers;
 
 
+use BotHub\Bots\Alfred;
 use Illuminate\Support\ServiceProvider;
 use Telegram\Bot\Api;
 
@@ -16,6 +17,7 @@ class BotServiceProvider extends ServiceProvider
 {
     public function register()
     {
-       //
+       $this->app->singleton(Alfred::class);
+       $this->app->alias(Alfred::class, 'alfred');
     }
 }

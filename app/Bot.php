@@ -100,6 +100,10 @@ class Bot
         );
     }
 
+    public function swapApi(Api $api)
+    {
+        $this->api = $api;
+    }
 
     protected function getName()
     {

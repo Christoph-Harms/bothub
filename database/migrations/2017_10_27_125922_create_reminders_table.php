@@ -19,6 +19,7 @@ class CreateRemindersTable extends Migration
             $table->text('message');
             $table->dateTime('remind_at');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

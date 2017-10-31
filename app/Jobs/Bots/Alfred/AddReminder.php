@@ -14,9 +14,9 @@ class AddReminder implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    protected $message;
-    protected $remindAt;
-    protected $chatId;
+    public $message;
+    public $remindAt;
+    public $chatId;
 
     /**
      * Create a new job instance.

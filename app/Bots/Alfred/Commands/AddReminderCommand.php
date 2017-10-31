@@ -35,11 +35,7 @@ class AddReminderCommand extends Command
         try {
             $chatId = $this->getUpdate()['message']['chat']['id'];
 
-            $arguments = explode(" ", $arguments);
-
-            $this->replyWithMessage([
-                'text' => "This is what I got: \n\n" . json_encode($arguments, JSON_PRETTY_PRINT),
-            ]);
+            $arguments = explode("--", $arguments);
 
             if (empty($chatId)) {
                 $this->replyWithMessage([
@@ -48,7 +44,7 @@ class AddReminderCommand extends Command
             }
 
             $datetime = Carbon::parse($arguments[0]);
-            $text = $arguments[1];
+            $text = trim($arguments[1]);
 
             $this->replyWithMessage([
                 'text' => 'Ok, I will remind you to "' . $text . '" at ' . $datetime->toDateTimeString(),
