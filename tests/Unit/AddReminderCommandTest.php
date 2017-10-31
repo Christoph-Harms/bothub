@@ -24,7 +24,7 @@ class AddReminderCommandTest extends TestCase
 
         $text = "I remind you.";
 
-        $args = "${time} -- ${text}";
+        $args = "${time}: ${text}";
 
         $m = \Mockery::mock(Api::class);
 
@@ -52,7 +52,7 @@ class AddReminderCommandTest extends TestCase
 
         $text = "   I remind you.";
 
-        $args = "${time} -- ${text}";
+        $args = "${time}: ${text}";
 
         $m = \Mockery::mock(Api::class);
 

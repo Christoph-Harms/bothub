@@ -35,7 +35,7 @@ class AddReminderCommand extends Command
         try {
             $chatId = $this->getUpdate()['message']['chat']['id'];
 
-            $arguments = explode("--", $arguments);
+            $arguments = explode(": ", $arguments);
 
             if (empty($chatId)) {
                 $this->replyWithMessage([
