@@ -34,7 +34,7 @@ class SendRemindersTest extends TestCase
             /** @var Reminder $item */
             return [
                 'chat_id' => $item->chat_id,
-                'text' => "You wanted to be reminded, so here is your reminder:\n\n" . $item->message,
+                'text' => $item->message,
             ];
         });
 
@@ -42,7 +42,7 @@ class SendRemindersTest extends TestCase
         $apiMock->shouldReceive('sendMessage')->with($sendMessageArgs[1]);
         $apiMock->shouldNotReceive('sendMessage')->with([
             'chat_id' => $futureReminder->chat_id,
-            'text' => "You wanted to be reminded, so here is your reminder:\n\n" . $futureReminder->message,
+            'text' => $futureReminder->message,
         ]);
 
         $this->app->instance('telegram', $apiMock);
