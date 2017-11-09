@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2017-10-26.
+    * Generated on 2017-11-06.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -42,7 +42,9 @@ namespace PHPSTORM_META {
         'command.ide-helper.generate' => \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand::class,
         'command.ide-helper.models' => \Barryvdh\LaravelIdeHelper\Console\ModelsCommand::class,
         'command.ide-helper.meta' => \Barryvdh\LaravelIdeHelper\Console\MetaCommand::class,
+        'BotHub\Bots\Alfred' => \BotHub\Bots\Alfred::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
+        'Telegram\Bot\Api' => \Telegram\Bot\Api::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
         'cache.store' => \Illuminate\Cache\Repository::class,
@@ -136,7 +138,6 @@ namespace PHPSTORM_META {
         'translator' => \Illuminate\Translation\Translator::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
         'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
-        'Telegram\Bot\Api' => \Telegram\Bot\Api::class,
     ]));
     override(\Illuminate\Contracts\Container\Container::make(0), map([
         '' => '@',
@@ -172,7 +173,9 @@ namespace PHPSTORM_META {
         'command.ide-helper.generate' => \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand::class,
         'command.ide-helper.models' => \Barryvdh\LaravelIdeHelper\Console\ModelsCommand::class,
         'command.ide-helper.meta' => \Barryvdh\LaravelIdeHelper\Console\MetaCommand::class,
+        'BotHub\Bots\Alfred' => \BotHub\Bots\Alfred::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
+        'Telegram\Bot\Api' => \Telegram\Bot\Api::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
         'cache.store' => \Illuminate\Cache\Repository::class,
@@ -266,7 +269,6 @@ namespace PHPSTORM_META {
         'translator' => \Illuminate\Translation\Translator::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
         'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
-        'Telegram\Bot\Api' => \Telegram\Bot\Api::class,
     ]));
     override(\Illuminate\Contracts\Container\Container::makeWith(0), map([
         '' => '@',
@@ -302,7 +304,9 @@ namespace PHPSTORM_META {
         'command.ide-helper.generate' => \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand::class,
         'command.ide-helper.models' => \Barryvdh\LaravelIdeHelper\Console\ModelsCommand::class,
         'command.ide-helper.meta' => \Barryvdh\LaravelIdeHelper\Console\MetaCommand::class,
+        'BotHub\Bots\Alfred' => \BotHub\Bots\Alfred::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
+        'Telegram\Bot\Api' => \Telegram\Bot\Api::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
         'cache.store' => \Illuminate\Cache\Repository::class,
@@ -396,7 +400,6 @@ namespace PHPSTORM_META {
         'translator' => \Illuminate\Translation\Translator::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
         'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
-        'Telegram\Bot\Api' => \Telegram\Bot\Api::class,
     ]));
     override(\App::make(0), map([
         '' => '@',
@@ -432,7 +435,9 @@ namespace PHPSTORM_META {
         'command.ide-helper.generate' => \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand::class,
         'command.ide-helper.models' => \Barryvdh\LaravelIdeHelper\Console\ModelsCommand::class,
         'command.ide-helper.meta' => \Barryvdh\LaravelIdeHelper\Console\MetaCommand::class,
+        'BotHub\Bots\Alfred' => \BotHub\Bots\Alfred::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
+        'Telegram\Bot\Api' => \Telegram\Bot\Api::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
         'cache.store' => \Illuminate\Cache\Repository::class,
@@ -526,7 +531,6 @@ namespace PHPSTORM_META {
         'translator' => \Illuminate\Translation\Translator::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
         'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
-        'Telegram\Bot\Api' => \Telegram\Bot\Api::class,
     ]));
     override(\App::makeWith(0), map([
         '' => '@',
@@ -562,7 +566,9 @@ namespace PHPSTORM_META {
         'command.ide-helper.generate' => \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand::class,
         'command.ide-helper.models' => \Barryvdh\LaravelIdeHelper\Console\ModelsCommand::class,
         'command.ide-helper.meta' => \Barryvdh\LaravelIdeHelper\Console\MetaCommand::class,
+        'BotHub\Bots\Alfred' => \BotHub\Bots\Alfred::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
+        'Telegram\Bot\Api' => \Telegram\Bot\Api::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
         'cache.store' => \Illuminate\Cache\Repository::class,
@@ -656,7 +662,6 @@ namespace PHPSTORM_META {
         'translator' => \Illuminate\Translation\Translator::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
         'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
-        'Telegram\Bot\Api' => \Telegram\Bot\Api::class,
     ]));
     override(\app(0), map([
         '' => '@',
@@ -692,7 +697,9 @@ namespace PHPSTORM_META {
         'command.ide-helper.generate' => \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand::class,
         'command.ide-helper.models' => \Barryvdh\LaravelIdeHelper\Console\ModelsCommand::class,
         'command.ide-helper.meta' => \Barryvdh\LaravelIdeHelper\Console\MetaCommand::class,
+        'BotHub\Bots\Alfred' => \BotHub\Bots\Alfred::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
+        'Telegram\Bot\Api' => \Telegram\Bot\Api::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
         'cache.store' => \Illuminate\Cache\Repository::class,
@@ -786,7 +793,6 @@ namespace PHPSTORM_META {
         'translator' => \Illuminate\Translation\Translator::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
         'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
-        'Telegram\Bot\Api' => \Telegram\Bot\Api::class,
     ]));
     override(\resolve(0), map([
         '' => '@',
@@ -822,7 +828,9 @@ namespace PHPSTORM_META {
         'command.ide-helper.generate' => \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand::class,
         'command.ide-helper.models' => \Barryvdh\LaravelIdeHelper\Console\ModelsCommand::class,
         'command.ide-helper.meta' => \Barryvdh\LaravelIdeHelper\Console\MetaCommand::class,
+        'BotHub\Bots\Alfred' => \BotHub\Bots\Alfred::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
+        'Telegram\Bot\Api' => \Telegram\Bot\Api::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
         'cache.store' => \Illuminate\Cache\Repository::class,
@@ -916,7 +924,6 @@ namespace PHPSTORM_META {
         'translator' => \Illuminate\Translation\Translator::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
         'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
-        'Telegram\Bot\Api' => \Telegram\Bot\Api::class,
     ]));
 
     override(\Illuminate\Support\Arr::add(0), type(0));
