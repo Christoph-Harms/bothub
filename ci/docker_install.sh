@@ -11,6 +11,6 @@ apt-get install git libxml2-dev wget -yqq
 
 # Install php extensions
 docker-php-ext-install pdo_mysql
-docker-php-ext-install mbstring
-docker-php-ext-install tokenizer
-docker-php-ext-install xml
+#docker-php-ext-install mbstring
+#docker-php-ext-install tokenizer
+#docker-php-ext-install xml
