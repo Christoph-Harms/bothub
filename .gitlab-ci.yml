@@ -10,6 +10,7 @@ before_script:
   - php composer-setup.php
   - php -r "unlink('composer-setup.php'); unlink('installer.sig');"
   - php composer.phar install
+  - echo "BOT_TOKEN_ALFRED=666" > .env
 
 test:app:
   script:
