@@ -1,3 +1,5 @@
 phpunit:
   script:
-    - vendor/bin/phpunit
+    - php -v
+    - pwd
+    - ls -lah
