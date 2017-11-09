@@ -34,6 +34,8 @@ class AddReminderCommandTest extends TestCase
                 'text' => 'Ok, I will remind you to "' . $text . '" at ' . Carbon::parse($time)->toDateTimeString(),
             ]);
 
+        Alfred::shouldReceive('addReminder');
+
         $command->make($m, $args, (new Update([
             'message' => [
                 'chat' => [
